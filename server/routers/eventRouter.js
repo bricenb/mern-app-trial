@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Customer = require("../models/eventModel");
 const auth = require("../middleware/auth");
 // creating events
-router.post("/", auth, async (req, res) => {
+router.post("/", async (req, res) => {
     try {
         const { name, time, location, title, description} = req.body;
 
@@ -26,7 +26,7 @@ router.post("/", auth, async (req, res) => {
     }
 });
 //getting events
-router.get("/", auth, async (req,res) => {
+router.get("/",  async (req,res) => {
     try {
 
         const customers = await Customer.find();

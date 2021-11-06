@@ -5,7 +5,7 @@ function auth(req, res, next) {
 
         const token = req.cookies.token;
 
-        if (!token) return res.status(401).json({errorMessage: "Unauthroized"});
+        if (!token) return res.status(401).json({errorMessage: "Unauthroized bricen"});
 
         const verified = jwt.verify(token, process.env.JWT_SECRET);
 
@@ -15,7 +15,7 @@ function auth(req, res, next) {
 
     } catch (err) {
         console.error(err);
-        res.status(401).json({errorMessage: "Unauthorized"});
+        res.status(401).json({errorMessage: "Unauthorized bricen"});
     }
 }
 
